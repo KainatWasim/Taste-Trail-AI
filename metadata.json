@@ -1,0 +1,6 @@
+{
+  "name": "TasteTrail AI",
+  "description": "Cultural travel discovery agent combining personal taste with Qloo's Cultural Intelligence API and agentic recommendations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,1490 @@
+# MASTER PROMPT: TASTETRAIL AI — COMPLETE AI-POWERED TRAVEL PLATFORM UPGRADE
+
+## 1. YOUR ROLE AND MISSION
+
+Act as a senior full-stack engineer, AI product architect, UI/UX designer, travel technology specialist, database engineer, and software quality assurance tester.
+
+Your mission is to transform my EXISTING project, **TasteTrail AI**, into a polished, intelligent, personalized, and fully functional AI-powered travel discovery and trip-planning platform.
+
+This is an upgrade of an existing project, NOT a request to build a separate website from scratch.
+
+The project is intended for an AI hackathon. Quality, innovation, reliable functionality, intelligent personalization, effective API integration, and an impressive live demonstration are essential.
+
+Work directly with the existing codebase and preserve all working features.
+
+Do not merely describe the changes or give me code snippets. Inspect the project, implement the improvements, connect the features, and test the result.
+
+---
+
+# 2. FIRST: INSPECT THE EXISTING PROJECT
+
+Before changing any code:
+
+1. Inspect the complete project structure.
+2. Identify the frontend framework, backend, dependencies, routes, components, styling system, environment variables, and current deployment configuration.
+3. Inspect the existing server implementation and all API integrations.
+4. Identify how Gemini and Qloo are currently connected.
+5. Review the existing recommendation engine, image handling, AI assistant, collection system, forms, and diagnostic features.
+6. Determine which features are already functional, partially implemented, broken, or missing.
+7. Check for existing authentication, database support, persistent storage, and user-specific data handling.
+8. Identify existing errors, duplicated code, insecure practices, and unnecessary dependencies.
+
+Create an internal implementation checklist before proceeding.
+
+**Critical preservation requirements:**
+
+* Keep the existing TasteTrail AI identity and project name.
+* Preserve the current working Qloo integration.
+* Preserve the existing Gemini integration and AI assistant.
+* Preserve useful existing components, routes, recommendation logic, and styling.
+* Do not delete functioning features simply to replace them with new implementations.
+* Do not rebuild the application from scratch.
+* Do not replace real API integrations with hardcoded demo data.
+* Do not change frameworks or perform a major architectural migration unless genuinely necessary.
+* Do not claim a feature works unless it has been implemented and tested.
+
+After inspecting the project, proceed with the upgrade. Do not stop after producing an analysis report.
+
+---
+
+# 3. PRODUCT VISION
+
+Product name: TasteTrail AI
+
+Brand concept: Your Taste. Your Journey. Your World.
+
+TasteTrail AI should help users discover destinations, find experiences that match their personal interests, plan complete trips, compare travel options, estimate expenses, and organize their journeys in one place.
+
+The platform should combine:
+
+* Taste-based discovery using Qloo.
+* Conversational reasoning and itinerary generation using Gemini.
+* Structured travel information.
+* Maps and location-aware exploration.
+* Flight and accommodation search.
+* Budget-aware planning.
+* Personalized recommendations.
+* Persistent user accounts and saved trips.
+
+The main differentiator should be meaningful personalization.
+
+The platform should explain WHY a place or experience matches the user's interests rather than presenting a generic list of popular destinations.
+
+All AI-generated suggestions must be clearly distinguished from verified external information.
+
+---
+
+# 4. DESIGN AND USER EXPERIENCE
+
+Retain the existing design direction unless the current implementation has a clear usability problem.
+
+Use the existing navy, teal, ivory, and gold visual identity where appropriate.
+
+Improve the design to feel like a premium travel technology product.
+
+Design requirements:
+
+* Beautiful, responsive layouts.
+* Professional typography and consistent spacing.
+* High-quality destination photography.
+* Clear navigation and recognizable icons.
+* Elegant cards with useful travel information.
+* Subtle animations and transitions.
+* Accessible colors, keyboard navigation, and readable text.
+* Proper loading indicators and skeleton screens.
+* Helpful empty states and error messages.
+* Consistent buttons, forms, modals, and notifications.
+* Responsive mobile, tablet, and desktop layouts.
+* No overlapping elements or broken layouts.
+* No excessive animations or unnecessary visual clutter.
+* No fake testimonials, fake reviews, or fabricated trust badges.
+
+Create a consistent experience across all pages.
+
+Do not redesign the entire interface unnecessarily. Improve the existing design while preserving recognizable elements.
+
+---
+
+# 5. PUBLIC WEBSITE AND NAVIGATION
+
+Create or improve the following navigation structure, adapting it to the current routing system:
+
+1. Home
+2. Discover
+3. Plan My Trip
+4. Flights
+5. Hotels
+6. Restaurants
+7. Explore Map
+8. Travel Assistant
+9. My Trips
+10. Community
+11. About
+12. Sign In / Create Account
+
+Authenticated users should see their profile and dashboard options.
+
+Public visitors should be able to explore the homepage, learn about the platform, browse public destinations, and view selected sample recommendations without registering.
+
+Protect personalized and account-specific features.
+
+Do not force registration for every page. Apply the access rules described below.
+
+---
+
+# 6. FEATURE 1: INTELLIGENT AI RECOMMENDATIONS
+
+Upgrade the existing recommendation system.
+
+Users should receive personalized suggestions for:
+
+* Destinations.
+* Attractions.
+* Cultural experiences.
+* Restaurants.
+* Food experiences.
+* Art and music.
+* Nature and outdoor activities.
+* Adventure activities.
+* Local experiences.
+* Hidden gems where reliable information is available.
+
+Collect relevant preferences, such as:
+
+* Destination or preferred region.
+* Travel interests.
+* Food preferences.
+* Culture and history.
+* Nature and adventure.
+* Relaxation.
+* Nightlife, where appropriate.
+* Family-friendly experiences.
+* Budget range.
+* Preferred atmosphere.
+* Trip duration.
+* Travel companions.
+
+Use the Qloo integration to retrieve relevant entities and taste-related information when supported by the available API.
+
+Use Gemini to interpret user preferences, organize results, explain recommendations, and help plan trips.
+
+Requirements:
+
+* Never assume that a user's preferences are known if they have not provided them.
+* Ask clarifying questions when important information is missing.
+* Avoid repeatedly showing identical recommendations.
+* Explain why each recommendation matches the user's preferences.
+* Include relevant images when suitable images can be obtained.
+* Display entity names, descriptions, locations, and other verified details when available.
+* Support alternative suggestions.
+* Provide useful filters and sorting.
+* Make recommendation results easy to save and add to an itinerary.
+
+Do not fabricate Qloo results or imply that Gemini generated information came directly from Qloo.
+
+If the live Qloo API is unavailable, display an honest error or clearly labeled fallback state.
+
+---
+
+# 7. FEATURE 2: DESTINATION AND EXPERIENCE DETAILS
+
+Create or improve a detailed view for each recommendation.
+
+Include the following when reliable information is available:
+
+* Name.
+* Relevant image gallery.
+* Category.
+* Description.
+* Address or geographic location.
+* Map position.
+* Why it matches the user's taste.
+* Suggested visit duration.
+* Estimated expense, if supported by a reliable source.
+* Opening hours, when verified.
+* Accessibility or visitor information, when available.
+* Official website.
+* Reservation or ticket link, when available.
+* Add to Favourites.
+* Add to My Trip.
+* Find Nearby Places.
+* Find Alternatives.
+
+Do not invent addresses, opening hours, prices, or official links.
+
+If information is unavailable, display "Not available" or omit the field gracefully.
+
+Image requirements:
+
+* Use relevant images, not random images.
+* Prefer reliable image sources and appropriately licensed images.
+* Verify image URLs where possible.
+* Include appropriate fallback images and loading states.
+* Prevent broken image layouts.
+* Do not claim an image depicts a particular venue unless its relevance can be established.
+
+---
+
+# 8. FEATURE 3: FLIGHT SEARCH
+
+Create a dedicated flight-search page and a reusable flight-search form.
+
+Form fields:
+
+* Departure airport or city.
+* Destination airport or city.
+* Departure date.
+* Return date for round trips.
+* One-way or round-trip selection.
+* Number of passengers.
+* Cabin class, if supported.
+* Currency preference, where supported.
+
+Validate required fields and date selections.
+
+Results should display, when supported by a connected flight service:
+
+* Airline.
+* Departure and arrival airports.
+* Departure and arrival times.
+* Total journey duration.
+* Stops.
+* Price and currency.
+* Baggage information, when available.
+* Fare conditions, when available.
+* Provider.
+* Booking link.
+
+Allow sorting by price, duration, departure time, and number of stops when those fields are available.
+
+Important integration rules:
+
+* Investigate whether a suitable free-tier flight API is available.
+* Check current API requirements, authentication, quotas, commercial restrictions, and permitted use.
+* Use actual flight data only when it is returned by a connected provider.
+* Do not invent live flight prices or flight availability.
+* Clearly label estimates, cached results, and live results.
+* If no flight API is configured, provide a functional search form that directs users to reputable external flight-search providers using the submitted search criteria when supported.
+* Do not pretend that an external search link is an integrated booking system.
+* Do not store or request payment-card information.
+
+---
+
+# 9. FEATURE 4: HOTEL SEARCH
+
+Create a dedicated accommodation-search page.
+
+Form fields:
+
+* Destination.
+* Check-in date.
+* Check-out date.
+* Number of guests.
+* Number of rooms.
+* Accommodation preferences.
+* Budget range.
+
+When reliable data is available, display:
+
+* Property name.
+* Relevant images.
+* Location.
+* Price and currency.
+* Price period, such as per night.
+* Guest rating and its source.
+* Accommodation type.
+* Available facilities.
+* Distance from selected attractions, if supported.
+* Availability status.
+* Official website or booking link.
+
+Allow users to filter and sort available results.
+
+Use a real accommodation provider when an appropriate integration is available.
+
+If no live accommodation API is configured, offer clearly labeled external search links rather than fabricated availability or prices.
+
+Do not invent reviews, ratings, discounts, or hotel availability.
+
+---
+
+# 10. FEATURE 5: RESTAURANTS AND DINING
+
+Improve restaurant recommendations using taste preferences and location.
+
+Support:
+
+* Cuisine preferences.
+* Dietary preferences.
+* Price range.
+* Restaurant type.
+* Location.
+* Desired atmosphere.
+* Occasion.
+
+Display relevant restaurant information when available:
+
+* Restaurant name.
+* Relevant images.
+* Cuisine.
+* Location.
+* Price category.
+* Opening hours, when verified.
+* Dietary information, when verified.
+* Rating and source.
+* Official website.
+* Reservation link.
+* Map location.
+* Why it matches the user.
+
+Use actual restaurant reservation links when available.
+
+Do not claim a reservation has been made unless a real booking service confirms it.
+
+---
+
+# 11. FEATURE 6: INTERACTIVE MAP
+
+Add or improve an interactive map.
+
+Requirements:
+
+* Show selected destinations and attractions.
+* Show saved places.
+* Show itinerary stops.
+* Display relevant place details when a marker is selected.
+* Allow users to open directions in a supported mapping service.
+* Display nearby attractions and restaurants where supported.
+* Show markers with understandable categories.
+* Fit the map to selected places when appropriate.
+* Handle missing coordinates gracefully.
+
+Inspect suitable mapping providers and their free-tier limits before selecting one.
+
+Do not expose private API keys in frontend code.
+
+If a map provider requires a key, use the correct configuration and document the setup process.
+
+If no map service is configured, provide a useful fallback with external map links.
+
+---
+
+# 12. FEATURE 7: AI TRIP PLANNER
+
+Build an intelligent itinerary planner.
+
+Users should be able to provide:
+
+* Destination.
+* Start and end dates.
+* Trip duration.
+* Number of travellers.
+* Budget.
+* Interests.
+* Travel style.
+* Preferred activities.
+* Accommodation preferences.
+* Mobility or accessibility requirements, if relevant.
+* Existing places they want to visit.
+
+Generate an editable day-by-day itinerary.
+
+Each itinerary day may include:
+
+* Morning activities.
+* Afternoon activities.
+* Evening activities.
+* Restaurant suggestions.
+* Suggested visit durations.
+* Estimated travel time between stops when supported.
+* Geographic grouping of nearby places.
+* Estimated expenses when reliable data exists.
+* Reservation or ticket links when available.
+
+Requirements:
+
+* Avoid impossible or excessively crowded schedules.
+* Account for opening hours when verified.
+* Account for travel dates and geographic distances when reliable data is available.
+* Clearly label AI-generated estimates.
+* Ask for missing essential information.
+* Allow users to regenerate a day or activity.
+* Allow adding, removing, and reordering activities.
+* Allow editing dates and notes.
+* Allow alternative activities for bad weather or unavailable venues.
+* Allow users to save the itinerary.
+* Allow users to export the plan as PDF if technically supported.
+
+Never state that a venue is open, available, or booked without supporting information.
+
+---
+
+# 13. FEATURE 8: TRANSPORTATION
+
+Provide useful transportation discovery for each destination.
+
+Include, where available:
+
+* Public transport information.
+* Airport-to-city transport options.
+* Local taxi and ride-service links.
+* Car-rental providers.
+* Walking directions.
+* Driving directions.
+* Estimated travel time.
+* Transport cost estimates.
+* Official transport websites.
+
+Clearly distinguish verified data from estimates.
+
+Do not invent transit schedules or claim a vehicle is available without a supporting provider.
+
+---
+
+# 14. FEATURE 9: SMART BUDGET PLANNER
+
+Create a budget dashboard.
+
+Users should be able to enter:
+
+* Total budget.
+* Currency.
+* Number of travellers.
+* Trip duration.
+* Preferred accommodation level.
+* Dining preferences.
+* Transport preferences.
+* Activities.
+
+Organize available estimates into:
+
+* Flights.
+* Accommodation.
+* Food.
+* Local transportation.
+* Activities and tickets.
+* Other expenses.
+
+Calculate totals accurately from the available figures.
+
+Show:
+
+* Estimated total.
+* Per-person estimate.
+* Daily average.
+* Remaining budget.
+* Category breakdown.
+* Budget warnings.
+* Lower-cost alternatives.
+
+Do not invent actual prices.
+
+If a category lacks real price data, clearly label its estimate or leave it unpriced until the user supplies an amount.
+
+Currency conversions must use a reliable configured source or clearly identified user-supplied exchange rate.
+
+Do not imply that the estimate is a guaranteed final travel cost.
+
+---
+
+# 15. FEATURE 10: WEATHER
+
+Provide destination weather information through a suitable weather service.
+
+Where supported, show:
+
+* Current conditions.
+* Temperature.
+* Rain probability.
+* Forecast for the travel dates.
+* Weather-related activity suggestions.
+
+If the forecast does not cover the requested travel dates, explain the limitation.
+
+Do not fabricate forecasts.
+
+Provide a useful fallback if no weather API is configured.
+
+---
+
+# 16. FEATURE 11: TRAVEL REQUIREMENTS
+
+Provide helpful travel-document and entry-requirement information.
+
+Where supported, help users find information about:
+
+* Visa requirements.
+* Passport validity.
+* Entry documentation.
+* Transit requirements.
+* Official immigration resources.
+* Relevant embassy or consular websites.
+
+Ask for nationality and destination when necessary, but request only information relevant to the query.
+
+Use official government sources whenever possible.
+
+Clearly state that requirements can change and must be verified before travel.
+
+Do not present AI-generated visa guidance as an official decision or guarantee of entry.
+
+Do not invent visa eligibility.
+
+---
+
+# 17. FEATURE 12: PACKING CHECKLIST
+
+Generate a customizable packing checklist based on:
+
+* Destination.
+* Travel dates.
+* Weather.
+* Trip duration.
+* Planned activities.
+* Traveller preferences.
+
+Organize items into categories such as:
+
+* Clothing.
+* Travel documents.
+* Electronics.
+* Toiletries.
+* Activity-specific items.
+* General essentials.
+
+Allow users to check off items and save the checklist with their trip.
+
+Do not require unnecessary sensitive information.
+
+---
+
+# 18. FEATURE 13: MY TRIPS AND FAVOURITES
+
+Create a personalized travel dashboard.
+
+Users should be able to:
+
+* View saved trips.
+* Create a trip.
+* Edit a trip.
+* Delete a trip.
+* View itinerary details.
+* Save destinations.
+* Save restaurants.
+* Save attractions.
+* Save external booking links.
+* Add personal notes.
+* Update the trip status.
+* View upcoming and past trips.
+* Export an itinerary when supported.
+
+Persist user-owned data using an appropriate database or secure existing persistence solution.
+
+Use local storage only for appropriate non-sensitive local preferences or temporary state.
+
+Do not rely exclusively on browser local storage for data that must synchronize between authenticated devices.
+
+Ensure users cannot access another user's private trips or personal information.
+
+Ask for confirmation before destructive actions.
+
+---
+
+# 19. FEATURE 14: AI TRAVEL ASSISTANT
+
+Improve the existing conversational assistant rather than creating a disconnected replacement.
+
+The assistant should support requests such as:
+
+* "Plan a five-day trip to Istanbul."
+* "Find cultural places matching my interests."
+* "Suggest restaurants near my selected attraction."
+* "Make my itinerary cheaper."
+* "Find alternatives for outdoor activities if it rains."
+* "Organize these saved places into a sensible itinerary."
+* "Help me compare two destinations."
+
+Use Gemini for conversation, reasoning, itinerary generation, and explanations.
+
+Use Qloo for supported taste-related discovery and relevant entity information.
+
+Use external APIs for factual information such as live prices, weather, and availability.
+
+The assistant must not claim to have searched an API, booked a hotel, purchased a ticket, or confirmed availability unless the corresponding action actually succeeded.
+
+Provide:
+
+* Conversation loading states.
+* Useful error handling.
+* Clear messages when external services are unavailable.
+* Context-aware follow-up questions.
+* Safe handling of user input.
+* A way to start a new conversation.
+
+If chat history is saved, associate it with the correct authenticated user and protect it appropriately.
+
+---
+
+# 20. FEATURE 15: BOOKING LINKS AND RESERVATION FLOW
+
+Provide appropriate external booking links for flights, hotels, restaurants, and activities.
+
+Requirements:
+
+* Prefer official providers or reputable booking services.
+* Use real, relevant destination or search URLs.
+* Preserve search parameters when the provider supports them.
+* Clearly identify external websites.
+* Never fabricate booking confirmations.
+* Do not collect payment information unless a legitimate, secure payment integration has been explicitly configured.
+* Never store payment-card details in this application.
+* Clearly communicate that final prices and availability are determined by the external provider.
+
+Implement the following intended user flow:
+
+1. The user explores public content.
+2. The user opens a travel search or trip-planning feature.
+3. When authentication is required, show a clear signup/login prompt.
+4. After successful authentication, return the user to the intended feature.
+5. Preserve valid form input or a pending trip action where practical.
+6. Display available results or clearly labeled alternatives.
+7. The user selects an external booking link.
+8. The external provider completes any actual reservation or payment process.
+
+Do not claim the user has completed a booking merely because they clicked a link.
+
+---
+
+# 21. FEATURE 16: AUTHENTICATION AND ACCESS CONTROL
+
+Implement or improve authentication using the existing architecture.
+
+Support:
+
+* Email and password signup.
+* Email and password login.
+* Google sign-in.
+* Logout.
+* Password reset.
+* Email verification when supported.
+* Session persistence.
+* Protected routes.
+* User-specific dashboards.
+* Appropriate error messages.
+
+Use a secure, supported authentication solution compatible with the existing project.
+
+Before choosing a new service, investigate its free tier, usage limits, configuration requirements, and whether it requires billing information.
+
+Never invent working OAuth credentials or pretend Google sign-in works before configuration and testing.
+
+Do not expose secrets in frontend code or public repository files.
+
+If Google authentication requires configuration, implement the correct integration and clearly document the remaining setup.
+
+Validate access on the server, not only by hiding frontend buttons.
+
+Apply sensible rate limiting and input validation where appropriate.
+
+---
+
+# 22. FEATURE 17: FREE PUBLIC ACCESS AND SIGNUP GATES
+
+Use a freemium-style access model.
+
+Public visitors may:
+
+* View the homepage.
+* Explore public destinations.
+* View selected public recommendations.
+* Read About and help content.
+* See examples of how the planner works.
+* Preview selected sample itineraries.
+
+Require authentication for:
+
+* Saving personal trips.
+* Accessing My Trips.
+* Saving favourites to an account.
+* Viewing private account data.
+* Using personalized features designated as account-only.
+* Accessing protected planning features where configured.
+* Using gated booking-search features, according to the intended product flow.
+
+When an unauthenticated user clicks a protected action:
+
+1. Explain why sign-in is required.
+2. Show Login and Create Account options.
+3. Preserve the intended destination or action where possible.
+4. Return the user to the requested feature after successful authentication.
+
+Do not put login barriers in front of every public page.
+
+Do not charge users or introduce paid subscriptions without explicit authorization.
+
+---
+
+# 23. FEATURE 18: USER PROFILE
+
+Create or improve profile management.
+
+Allow users to manage appropriate details such as:
+
+* Display name.
+* Profile image, where supported.
+* Preferred language.
+* Preferred currency.
+* Travel interests.
+* Preferred trip style.
+* Food preferences.
+* Accessibility preferences, if the user chooses to provide them.
+
+Allow users to update their preferences.
+
+Use these preferences to improve future recommendations.
+
+Collect only information needed for the product.
+
+Do not expose personal profile information publicly by default.
+
+---
+
+# 24. FEATURE 19: TRAVEL HISTORY
+
+Allow users to review their own saved and completed trips.
+
+Include:
+
+* Trip destination.
+* Dates.
+* Saved itinerary.
+* User notes.
+* Favourite experiences.
+* Relevant external booking links.
+
+Only mark a trip completed when the user or a verified supported workflow indicates that it is complete.
+
+Do not imply that the system knows whether a user actually travelled.
+
+Allow users to edit or delete their own history.
+
+---
+
+# 25. FEATURE 20: NOTIFICATIONS
+
+Create a notification system appropriate to the existing architecture.
+
+Potential notifications include:
+
+* Upcoming trip reminders.
+* Saved itinerary updates.
+* User-requested travel reminders.
+* Supported external booking or flight updates.
+
+Do not send fake flight alerts or booking confirmations.
+
+Do not promise background monitoring unless a real scheduled service or provider integration is configured.
+
+Ask for appropriate notification permission before enabling browser notifications.
+
+Allow users to manage notification preferences.
+
+---
+
+# 26. FEATURE 21: SOCIAL TRAVEL COMMUNITY
+
+Add a lightweight community feature if it can be implemented reliably without destabilizing the existing application.
+
+Support:
+
+* Public itinerary sharing.
+* Public trip discovery.
+* Browsing other users' public itineraries.
+* A shareable link for a selected public itinerary.
+* Privacy controls for each itinerary.
+* Attribution to the creator when appropriate.
+
+Private trips must remain private unless their owner explicitly chooses to share them.
+
+Do not expose emails, private profile data, personal notes, or other private information through public itinerary pages.
+
+If comments, likes, or ratings are implemented, validate submissions and provide basic abuse prevention.
+
+Prioritize a functional itinerary-sharing system over a large but incomplete social network.
+
+---
+
+# 27. FEATURE 22: REVIEWS AND RATINGS
+
+Support reviews and ratings only when the source and authenticity can be represented accurately.
+
+If users can submit their own reviews:
+
+* Validate the content.
+* Associate reviews with the correct user.
+* Prevent unauthorized editing or deletion.
+* Provide reporting or moderation controls where practical.
+* Label user-submitted reviews appropriately.
+
+If third-party ratings are displayed, identify their source and respect its usage terms.
+
+Never invent customer reviews or present AI-generated descriptions as real customer feedback.
+
+---
+
+# 28. FEATURE 23: PDF EXPORT AND SHARING
+
+Allow users to export a saved itinerary when technically supported.
+
+The PDF should include:
+
+* Trip title.
+* Destination.
+* Dates.
+* Day-by-day schedule.
+* Saved places.
+* Relevant addresses.
+* Available estimated costs.
+* Notes.
+* Relevant external booking links.
+
+Use a clean, professional printable layout.
+
+Do not include private account information unnecessarily.
+
+Ensure PDF export works in the actual runtime.
+
+Provide a clear error if export fails.
+
+---
+
+# 29. FEATURE 24: SMART ALTERNATIVES AND PLAN ADAPTATION
+
+Add intelligent itinerary adaptation.
+
+Help users adjust plans when:
+
+* Their budget changes.
+* Their trip dates change.
+* They prefer different activities.
+* A selected activity is unavailable.
+* Weather makes an outdoor activity less suitable.
+* They want fewer activities per day.
+* They prefer lower-cost transportation.
+* They want alternatives near their current itinerary.
+
+Use real information where available.
+
+When live information is unavailable, offer suggestions without falsely claiming to know current availability.
+
+Explain important changes and allow users to accept or reject them.
+
+Do not silently overwrite a user's saved itinerary.
+
+---
+
+# 30. FEATURE 25: PERSONALIZED TRAVEL STYLE
+
+Develop a useful travel-preference profile from information the user chooses to provide.
+
+Possible preferences include:
+
+* Culture and history.
+* Food and cuisine.
+* Nature.
+* Adventure.
+* Relaxation.
+* Art and music.
+* Local experiences.
+* Family-friendly activities.
+* Budget-conscious travel.
+* Luxury experiences.
+
+Use this information to improve discovery and trip planning.
+
+Explain how preferences affect recommendations.
+
+Allow users to update or reset their preferences.
+
+Do not infer sensitive personal attributes from travel preferences.
+
+Do not claim to have created a scientifically validated personality assessment.
+
+---
+
+# 31. FEATURE 26: TASTE-BASED EXPLANATIONS
+
+Make taste-based personalization a visible differentiator.
+
+For each relevant recommendation, provide a concise explanation, such as:
+
+"Recommended because it matches your interest in local food, historic neighbourhoods, and quieter cultural experiences."
+
+Only use preferences that the user actually provided or that are supported by the configured recommendation system.
+
+Keep explanations understandable and specific.
+
+Do not falsely attribute a recommendation to Qloo if the result was generated without Qloo data.
+
+---
+
+# 32. FEATURE 27: TRIP PLANNING FORMS
+
+Build a polished and consistent trip-planning form.
+
+Include:
+
+* Destination.
+* Departure location, if relevant.
+* Start and end dates.
+* Number of travellers.
+* Budget and currency.
+* Interests.
+* Travel style.
+* Accommodation preferences.
+* Dietary preferences where relevant.
+* Optional notes.
+
+Use sensible defaults and conditional fields.
+
+Validate dates and required inputs.
+
+Show clear inline validation messages.
+
+Prevent accidental duplicate submissions.
+
+Make the form responsive and accessible.
+
+Preserve valid user input when navigating to login and back, where practical.
+
+---
+
+# 33. FEATURE 28: SEARCH AND FILTER FORMS
+
+Create consistent forms for flights, hotels, restaurants, and destinations.
+
+Each form should:
+
+* Have meaningful labels.
+* Validate required inputs.
+* Display loading states.
+* Handle empty results.
+* Display API errors clearly.
+* Support relevant filters.
+* Provide sorting when data supports it.
+* Preserve relevant search parameters.
+* Work on mobile and desktop.
+
+Do not display fake results as if they were real API responses.
+
+---
+
+# 34. FEATURE 29: USER DASHBOARD
+
+Create a useful dashboard for authenticated users.
+
+Display relevant information such as:
+
+* Upcoming trips.
+* Saved destinations.
+* Recent itineraries.
+* Favourite experiences.
+* Trip-planning shortcuts.
+* Budget summaries for saved trips.
+* Packing checklist progress.
+* Recent notifications, if configured.
+
+Use real user data rather than decorative placeholders.
+
+Provide useful empty states for new users.
+
+Ensure dashboard data belongs to the authenticated user.
+
+---
+
+# 35. FEATURE 30: ADMINISTRATIVE AND SYSTEM DIAGNOSTICS
+
+Preserve and improve the existing Qloo Status and diagnostic functionality.
+
+Provide an appropriate diagnostic view for authorized development or administrative use.
+
+Where practical, display:
+
+* Qloo connection status.
+* Gemini connection status.
+* Configured mapping provider status.
+* Configured weather provider status.
+* Configured flight provider status.
+* Configured hotel provider status.
+* Database or authentication service status.
+* Last successful check.
+* Meaningful error messages.
+
+Do not expose API keys, access tokens, internal secrets, or sensitive server configuration.
+
+Do not claim a service is connected merely because a configuration variable exists.
+
+Use actual health checks where safe and supported.
+
+Do not expose sensitive diagnostic details to ordinary public users.
+
+---
+
+# 36. ADDITIONAL HIGH-VALUE DIFFERENTIATORS
+
+In addition to the core feature set, introduce the following improvements where they fit the existing architecture.
+
+## A. Vibe-to-Trip Planning
+
+Allow users to describe the kind of experience they want in natural language.
+
+Example:
+
+"I want a peaceful five-day trip with local food, beautiful scenery, cultural experiences, and a moderate budget."
+
+The assistant should interpret this request, identify missing details, and create a relevant plan.
+
+## B. Taste-Aware Discovery
+
+Use Qloo-supported data to improve relevant recommendations based on the user's declared preferences and interests.
+
+Do not reduce personalization to generic popularity rankings.
+
+## C. Explainable Recommendations
+
+Explain why the selected destination, restaurant, or activity fits the user's stated interests.
+
+## D. Budget-Aware Alternatives
+
+Suggest alternatives when the estimated plan exceeds the user's budget.
+
+Clearly distinguish real prices from estimates.
+
+## E. Flexible Itinerary
+
+Let users revise individual days and replace activities without rebuilding their entire plan.
+
+## F. Cultural Discovery
+
+Highlight relevant local food, art, traditions, architecture, and cultural experiences when reliable information is available.
+
+Avoid stereotypes and unsupported cultural claims.
+
+## G. Accessible and Practical Travel
+
+Where data is available, help users discover accessible transport, attractions, and practical visitor information.
+
+Never invent accessibility details.
+
+These improvements should integrate naturally into the existing application rather than becoming disconnected demo pages.
+
+---
+
+# 37. API AND INTEGRATION STRATEGY
+
+The application currently uses Qloo and Gemini. Inspect their existing implementations before changing anything.
+
+## Qloo
+
+* Preserve the existing API base URL and supported request patterns.
+* Use the existing server-side API integration.
+* Preserve the correct API key environment-variable name if already configured.
+* Verify endpoint paths, authentication headers, supported filters, entity types, response schemas, quotas, and API terms.
+* Parse real API responses defensively.
+* Handle missing fields and unsuccessful requests.
+* Do not invent unsupported API capabilities.
+* Do not fabricate entities or claim that fallback data came from Qloo.
+
+## Gemini
+
+* Preserve the current model and configuration when working correctly.
+* Check the actual supported SDK and model configuration in the project.
+* Use Gemini for appropriate reasoning, natural-language interaction, explanations, and itinerary generation.
+* Validate structured outputs before using them in the interface.
+* Handle rate limits, timeouts, invalid responses, and unavailable services.
+* Keep credentials server-side wherever the architecture supports it.
+
+## Additional services
+
+Evaluate free or free-tier services for:
+
+* Maps.
+* Weather.
+* Flights.
+* Accommodation search.
+* Currency conversion.
+* Authentication.
+* Persistent database storage.
+* PDF export.
+
+Before integrating a provider, check:
+
+1. Whether it currently offers a usable free tier.
+2. Whether payment details are required.
+3. API quotas and rate limits.
+4. Required environment variables.
+5. Commercial or hackathon usage restrictions.
+6. Whether real-time data is available.
+7. Whether the service is appropriate for this application.
+
+Do not assume every service is completely free or has unlimited usage.
+
+Do not introduce paid services without explicit approval.
+
+Do not make unnecessary provider integrations merely to increase the feature count.
+
+If a service requires a secret, implement its integration correctly and document the exact configuration needed.
+
+Never expose secret values in client bundles, logs, screenshots, or source code.
+
+---
+
+# 38. DATA ARCHITECTURE AND SECURITY
+
+Inspect the current data architecture and reuse it where suitable.
+
+For every persistent entity, define the necessary fields and relationships.
+
+Potential entities include:
+
+* Users.
+* User preferences.
+* Trips.
+* Itinerary days.
+* Itinerary activities.
+* Saved places.
+* Favourites.
+* Packing checklist items.
+* User reviews.
+* Shared itineraries.
+* Notifications.
+
+Do not introduce an unnecessary database if an appropriate persistent database already exists.
+
+If persistent storage is missing, recommend and implement a suitable solution compatible with the existing application and the user's cost constraints.
+
+Security requirements:
+
+* Validate user inputs on the server.
+* Protect private routes and data.
+* Enforce ownership of trips and other personal records.
+* Protect authentication sessions.
+* Use secure password handling through a supported authentication system.
+* Avoid SQL injection, cross-site scripting, and unsafe HTML rendering.
+* Avoid logging secrets.
+* Do not expose API keys in public frontend bundles.
+* Add appropriate request validation and rate limiting where practical.
+* Use safe error messages without leaking internal implementation details.
+* Do not store payment-card details.
+* Avoid collecting unnecessary personal data.
+
+---
+
+# 39. FREE-FIRST IMPLEMENTATION
+
+The project should remain free to develop and test wherever possible.
+
+Prioritize:
+
+* Existing integrations.
+* Open-source libraries.
+* Official free tiers.
+* Services with clear usage limits.
+* Simple architecture.
+* No unnecessary paid dependencies.
+
+Do not promise unlimited free API access.
+
+Do not bypass provider limits or access controls.
+
+When a feature cannot work without a missing API key, account, or provider permission:
+
+1. Implement the appropriate integration structure.
+2. Provide a clear setup instruction.
+3. Display a helpful unavailable state until configured.
+4. Avoid fabricated live results.
+5. Continue developing and testing other independent features.
+
+Do not introduce subscriptions, payments, or premium charges without explicit approval.
+
+---
+
+# 40. ERROR HANDLING AND USER FEEDBACK
+
+Every major feature should have:
+
+* Loading state.
+* Success state.
+* Empty state.
+* Validation state.
+* Error state.
+* Retry option where appropriate.
+
+Use clear user-friendly messages.
+
+Do not leave users staring at a blank screen.
+
+Do not hide API failures behind fake success messages.
+
+Avoid exposing stack traces or secrets to ordinary users.
+
+Log only useful, non-sensitive diagnostic information.
+
+---
+
+# 41. PERFORMANCE AND ACCESSIBILITY
+
+Improve performance without damaging existing functionality.
+
+Requirements:
+
+* Avoid unnecessary API calls.
+* Debounce appropriate search inputs.
+* Use pagination or progressive loading where appropriate.
+* Optimize image sizes and loading.
+* Avoid unnecessary dependency additions.
+* Avoid repeated identical requests.
+* Prevent memory leaks in frontend components.
+* Use accessible labels and keyboard-friendly controls.
+* Respect reduced-motion preferences where practical.
+* Ensure responsive layouts and readable text.
+
+---
+
+# 42. TESTING AND QUALITY ASSURANCE
+
+Do not finish immediately after making visual changes.
+
+Test the actual application.
+
+At minimum, verify:
+
+## Core functionality
+
+* Existing homepage.
+* Existing navigation.
+* Existing recommendation system.
+* Qloo API connection.
+* Gemini assistant.
+* Recommendation images.
+* Recommendation detail views.
+* Saving and retrieving favourites.
+* Trip creation and editing.
+* Trip planning form validation.
+* Budget calculations.
+* Search forms.
+* Authentication flows, if configured.
+* Protected routes.
+* Public versus private itinerary access.
+* Responsive layouts.
+* Error and empty states.
+
+## Integration behavior
+
+* Qloo unavailable.
+* Gemini unavailable.
+* Missing optional API keys.
+* Invalid user inputs.
+* Empty search results.
+* Failed external requests.
+* Expired or invalid sessions.
+* Missing image URLs.
+* Missing location data.
+* API rate limits where testable.
+
+## Security checks
+
+* Secrets are not exposed in frontend code.
+* Private trips are not publicly accessible.
+* One user cannot access another user's private data.
+* Authentication checks are enforced on protected server operations.
+* External booking links do not falsely imply a completed reservation.
+
+Run the available build, lint, and test commands.
+
+Resolve introduced errors and regressions.
+
+Do not claim tests passed if they were not run.
+
+---
+
+# 43. IMPLEMENTATION ORDER
+
+Implement the project in sensible phases.
+
+## Phase 1: Audit and preservation
+
+* Inspect the codebase.
+* Document existing working functionality.
+* Fix existing critical errors.
+* Preserve the Qloo integration, Gemini assistant, and existing identity.
+* Identify missing configuration.
+
+## Phase 2: Core user experience
+
+* Improve navigation and responsive design.
+* Improve discovery and recommendation cards.
+* Improve place details and images.
+* Improve forms, loading states, and error handling.
+
+## Phase 3: Accounts and persistence
+
+* Implement or improve email/password authentication.
+* Implement Google sign-in where configuration is available.
+* Protect user data.
+* Implement user profiles, favourites, My Trips, and saved itineraries.
+
+## Phase 4: Trip planning
+
+* Implement the itinerary planner.
+* Implement the budget calculator.
+* Add packing checklists.
+* Add itinerary editing and alternatives.
+* Implement PDF export where supported.
+
+## Phase 5: Travel discovery and external services
+
+* Improve restaurant discovery.
+* Implement interactive maps.
+* Add weather information.
+* Add flight and hotel search integrations or clearly labeled external search fallbacks.
+* Add transport discovery.
+* Add travel-document resources.
+
+## Phase 6: Community and advanced AI
+
+* Implement public itinerary sharing.
+* Add reviews and ratings using trustworthy sources or user-submitted data.
+* Improve taste-aware personalization.
+* Add explainable recommendations.
+* Add adaptive itinerary suggestions.
+
+## Phase 7: Final quality assurance
+
+* Test the complete user journey.
+* Fix errors and regressions.
+* Verify authentication and access control.
+* Verify API failure behavior.
+* Test responsive design.
+* Confirm that the project builds and runs.
+
+You may adjust this sequence to fit the existing architecture, but do not sacrifice security or working functionality for visual polish.
+
+---
+
+# 44. EXPECTED USER JOURNEYS
+
+The final application should support these user journeys wherever the required integrations are configured.
+
+## Journey A: Public visitor
+
+1. Opens TasteTrail AI.
+2. Explores destinations and public recommendations.
+3. Understands the value of personalized travel planning.
+4. Opens a protected planning feature.
+5. Sees a clear signup/login prompt.
+6. Can return to the intended action after authentication.
+
+## Journey B: Personalized trip planning
+
+1. Creates an account or signs in.
+2. Enters destination, dates, budget, and interests.
+3. Receives personalized recommendations.
+4. Reviews why the recommendations match their preferences.
+5. Adds places to an itinerary.
+6. Reviews the schedule and budget.
+7. Edits activities and alternatives.
+8. Saves the trip.
+9. Reopens it from My Trips.
+10. Exports or shares the itinerary when supported.
+
+## Journey C: Travel search
+
+1. Opens Flights or Hotels.
+2. Completes the search form.
+3. Receives actual provider results when configured.
+4. Otherwise receives a clearly labeled external search option.
+5. Reviews available information.
+6. Opens a relevant booking provider.
+7. Completes any actual booking with that provider.
+
+## Journey D: Adaptive planning
+
+1. Opens an existing itinerary.
+2. Requests a change, such as lowering the budget.
+3. Receives relevant alternatives.
+4. Reviews the suggested changes.
+5. Accepts or rejects them.
+6. Saves the updated itinerary.
+
+## Journey E: Shared travel inspiration
+
+1. A user explicitly publishes an itinerary.
+2. Other users can view the public itinerary.
+3. Private information remains hidden.
+4. Visitors can use the itinerary as inspiration.
+5. Users can sign in to create and save their own trips.
+
+---
+
+# 45. DEFINITION OF DONE
+
+The project is not complete merely because the interface looks attractive.
+
+Completion requires:
+
+* The existing application remains recognizable.
+* Existing working Qloo and Gemini integrations are preserved.
+* Core recommendations work as intended.
+* Recommendation explanations use the correct available information.
+* Forms validate input.
+* User data is protected.
+* Authentication works when correctly configured.
+* My Trips and favourites persist appropriately.
+* Itinerary editing works.
+* Budget calculations are correct.
+* Images fail gracefully.
+* External booking links are relevant and clearly labeled.
+* Missing integrations are honestly reported.
+* The application remains responsive.
+* No unnecessary paid services are introduced.
+* The available build and tests pass, or remaining failures are explicitly documented.
+
+---
+
+# 46. FINAL EXECUTION INSTRUCTIONS
+
+Now begin working on the EXISTING TasteTrail AI project.
+
+First inspect the actual codebase and identify what is already implemented.
+
+Then make the upgrades directly in the existing project, reusing working components and integrations.
+
+Prioritize reliable end-to-end functionality over implementing many incomplete features.
+
+Do not stop after creating a plan.
+
+Do not replace real integrations with mock data.
+
+Do not fabricate prices, ratings, reviews, availability, or booking confirmations.
+
+Do not expose secrets.
+
+Do not silently remove existing functionality.
+
+If a feature requires an external API or credentials that are unavailable, implement the appropriate integration structure, document the exact setup required, and provide an honest fallback.
+
+After implementation, test the application and provide a concise completion report containing:
+
+1. Existing functionality preserved.
+2. Features successfully implemented.
+3. Features improved.
+4. External integrations actually working.
+5. Integrations that still require configuration.
+6. Build and test results.
+7. Any known limitations.
+8. Exact steps needed to run the upgraded project.
+
+Make TasteTrail AI feel like one coherent, intelligent travel product—not a collection of disconnected demo screens.
+
+Begin by inspecting the existing project now.
